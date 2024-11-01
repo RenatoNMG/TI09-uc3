@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade2</title>
+    <style>
+        div{
+            background-color: rgb(82, 170, 170);
+            text-align: center;
+            padding: 50px;
+        }
+       
+    </style>
+</head>
+<body>
+
+    <div>
+        <h1>Atividade uc3</h1>
+        <input type="text" id = "seuNome" placeholder="digite seu Nome">
+
+    <button onclick="botao()">Enviar</button>
+
+    <p id="mensagem"></p>
+
+    </div>
+    
+
+
+    <script>
+       
+        function botao(){
+            
+            let nome = document.getElementById("seuNome").value;
+            let idade = prompt("qual sua idade? ");
+
+            document.getElementById("mensagem").innerText = `ola ${nome} voce tem ${idade} anos`;
+
+        }
+        
+
+        
+
+    </script>
+    
+</body>
+</html>
