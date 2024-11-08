@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade04</title>
+</head>
+<body>
+
+    <input id="idade" type="number" placeholder="Qual sua idade">
+    <input id="altura" type="number" placeholder="Qual sua altura">
+
+    <button onclick="resultado()">Resultado</button>
+
+    <p id="resultado"></p>
+    
+    <script>
+
+        
+
+        function resultado(){
+
+            let idade = parseInt(document.getElementById("idade").value);
+            let altura = parseFloat( document.getElementById("altura").value);
+
+           console.log(idade,altura)
+
+            if (idade >= 18 && altura >= 1.60){
+                console.log("Pode entrar na atração ")
+                document.getElementById("resultado").innerText = "Pode entrar na atração"
+            }else{
+                console.log("Não pode entrar na atração")
+                document.getElementById("resultado").innerText = "Não pode entrar na atração"
+            }
+
+            
+        }
+
+    </script>
+</body>
+</html>

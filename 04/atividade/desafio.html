@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio</title>
+</head>
+<body>
+
+    <input id="velo" type="range" min="0" max="220">
+    <button onclick="test()" id="radar">radar</button>
+    <p id="kh"></p>
+
+    <script>
+        
+
+        
+        function test(){
+
+            let velocidade =  document.getElementById("velo").value;
+
+            let resultado = velocidade > 80 ? "multado " + velocidade: "não multado " + velocidade;
+
+            document.getElementById("kh").innerText = resultado
+
+        }
+    </script>   
+</body>
+</html>
