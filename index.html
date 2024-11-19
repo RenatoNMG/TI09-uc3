@@ -4,83 +4,202 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>UC3</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Aula 05</title>
+    <link rel="stylesheet" href="../styles.css">
 </head>
 
 <body>
     <header>
         <div class="container">
             <nav class="header-nav">
-                <a href="#" class="brand">UC3</a>                
+                <a href="../index.html" class="brand">UC3</a>
+                <ul class="nav-links">
+                    <li><a href="../04/index.html">Anterior</a></li>
+                    <li><a href="#atividade">Atividade</a></li>
+                    <li><a href="../06/index.html">Próxima</a></li>
+                </ul>
             </nav>
         </div>
     </header>
 
     <section>
         <div class="container">
-            <h1>Codificar front-end de aplicações web.</h1>
-            <h2>Carga Horária: 96 horas</h2>
+            <h1>Estruturas Condicionais em JavaScript</h1>
+            <h2>
+                Nessa aula, o foco é entender como controlar o fluxo de um programa usando estruturas condicionais.
+            </h2>
             <hr>
-        </div>        
-    </section>
-
-    <section>
-        <div class="container">
-            <h3>Indicadores</h3>
-            <ol>
-                <li>Cria blocos de Back-End, utilizando linguagens de programação de script, de acordo com
-                    os requisitos do projeto de software.</li>
-                <li>Manipula os elementos estruturais de acordo com os requisitos do projeto.</li>
-                <li>Programa comportamentos dinâmicos, definindo estilos e animações, de acordo com
-                    requisitos do projeto e padrões de acessibilidade e usabilidade</li>
-                <li>Implementa Frameworks de acordo com as necessidades do projeto.</li>
-                <li>Comunica requisições conforme recursos disponibilizados pelo Back-End.</li>
-                <li>Implementa correções e melhorias de acordo com a depuração de código de script.</li>
-                <li>Implementa usabilidade e acessibilidade a páginas web de acordo com os padrões do
-                    W3C.</li>
-            </ol>
         </div>
     </section>
 
     <section>
         <div class="container">
-            <h3>Aulas Práticas</h3>
+            <h3>Objetivo da Aula</h3>
+            <ul>
+                <li>
+                    Compreender e implementar estruturas condicionais <code>if</code>, <code>else if</code>,
+                    <code>else</code> e <code>switch</code>.
+                </li>
+                <li>
+                    Criar condições mais complexas para controlar o fluxo da aplicação.
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <section>
+        <div class="container">
+            <h3>Conteúdo da Aula</h3>
             <ol>
-                <li><h4>Fundamentos e Sintaxe do JavaScript</h4>
-                    <ol>
-                        <li><a href="01/index.html">Introdução ao JavaScript: Diferenças entre sites estáticos e dinâmicos; conceitos de linguagens de script.</a></li>
-                        <li><a href="02/index.html">Saídas e Entradas em JavaScript: console.log, manipulação de innerText e prompt.</a></li>
-                        <li><a href="03/index.html">Variáveis e Tipos de Dados: Declaração de variáveis, tipos primitivos, e operações básicas.</a></li>
-                        <li><a href="#">Operadores e Expressões: Aritméticos, lógicos, comparativos e ternário.</a></li>
-                        <li><a href="#">Estruturas Condicionais: if, else if, else, switch.</a></li>
-                        <li><a href="#">Laços de Repetição: for, while, do...while.</a></li>
-                    </ol>
-                </a></li>
-                <li><h4>Funções, Eventos e Manipulação de DOM Básica</h4>
-                    <ol>
-                        <li><a href="#">Funções: Declaração, parâmetros, retorno, funções anônimas e arrow functions.</a></li>
-                        <li><a href="#">Eventos em JavaScript: onclick, onmouseover, onkeydown, e manipulação de eventos no DOM.</a></li>
-                        <li><a href="#">Introdução ao DOM: Estrutura do DOM, propriedades e métodos essenciais.</a></li>
-                        <li><a href="#">Selecionando Elementos no DOM: getElementById, querySelector, querySelectorAll.</a></li>
-                        <li><a href="#">Manipulação Básica de Elementos: Alteração de texto, classes, e atributos de elementos.</a></li>
-                        <li><a href="#">Criando e Removendo Elementos do DOM: createElement, appendChild, removeChild.</a></li>
-                    </ol>
-                </a></li>
-                <li><h4>Programação Dinâmica e Animações</h4>
-                    <ol>
-                        <li><a href="#">Estilizando com JavaScript: Manipulação de estilos em elementos com style.</a></li>
-                        <li><a href="#">Classes Dinâmicas: Adicionar e remover classes dinamicamente para estilização.</a></li>
-                        <li><a href="#">Introdução a Animações em JavaScript: Animações básicas usando temporizadores.</a></li>
-                        <li><a href="#">Timer e Intervalo: Uso de setTimeout e setInterval para manipulação de comportamento assíncrono.</a></li>
-                        <li><a href="#">Exemplo Prático: Criando um Slider: Implementação de um slider de imagens com transições automáticas.</a></li>
-                    </ol>
+                <li>
+                    <h4>Estrutura Condicional <code>if</code>, <code>else if</code> e <code>else</code></h4>
+                    <p>A estrutura if, else if e else permite que o código execute blocos específicos com base em uma
+                        condição.</p>
+                    <ul>
+                        <li><code>if</code>: executa o bloco de código se a condição for verdadeira.</li>
+                        <li><code>else if</code>: opcional, verifica uma nova condição se a anterior for falsa.</li>
+                        <li><code>else</code>: opcional, executa o bloco de código caso todas as condições anteriores
+                            sejam falsas.</li>
+                        <li>
+                            Sintaxe e Exemplo
+                            <div class="code-block">
+                                <div class="code-block-title">JavaScript</div>
+                                <pre><code>
+let nota = parseInt(prompt("Digite a nota do aluno:"));
+
+if (nota >= 7) {
+    console.log("Aprovado");
+} else if (nota >= 5) {
+    console.log("Recuperação");
+} else {
+    console.log("Reprovado");
+}
+                                </code></pre>
+                            </div>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <h4>Estrutura Condicional <code>switch</code></h4>
+                    <p>A estrutura <code>switch</code> é usada para comparar o valor de uma variável a várias opções
+                        (<code>case</code>).
+                        É útil para substituir múltiplas condições <code>if</code> quando se tem uma variável com
+                        valores específicos e previsíveis.</p>
+                    <ul>
+                        <li><code>case</code>: compara o valor da variável.</li>
+                        <li><code>break</code>: interrompe a execução do bloco switch (se não utilizar, os blocos
+                            seguintes também serão executados).</li>
+                        <li><code>default</code>: executa caso nenhum case corresponda ao valor da variável.</li>
+                        <li>
+                            Sintaxe e Exemplo
+                            <div class="code-block">
+                                <div class="code-block-title">JavaScript</div>
+                                <pre><code>
+let diaSemana = parseInt(prompt("Digite um número de 1 a 7 para o dia da semana:"));
+
+switch (diaSemana) {
+    case 1:
+        console.log("Domingo");
+        break;
+    case 2:
+        console.log("Segunda-feira");
+        break;
+    case 3:
+        console.log("Terça-feira");
+        break;
+    case 4:
+        console.log("Quarta-feira");
+        break;
+    case 5:
+        console.log("Quinta-feira");
+        break;
+    case 6:
+        console.log("Sexta-feira");
+        break;
+    case 7:
+        console.log("Sábado");
+        break;
+    default:
+        console.log("Número inválido. Digite de 1 a 7.");
+}
+                                </code></pre>
+                            </div>
+                        </li>
+                    </ul>
                 </li>
             </ol>
-                                               
+            <p>Neste exemplo, cada <code>case</code> representa um dia da semana,
+                e a estrutura <code>switch</code> exibe o dia correspondente ao número inserido.</p>
         </div>
     </section>
 
+    <section>
+        <div class="container">
+            <h3>Exemplos Práticos</h3>
+            <ol>
+                <li>
+                    <h4>Usando <code>if</code> para Verificar Idade</h4>                    
+                    <div class="code-block">
+                        <div class="code-block-title">JavaScript</div>
+                        <pre><code>
+let idade = parseInt(prompt("Digite a sua idade:"));
+
+if (idade < 18) {
+    console.log("Menor de idade");
+} else if (idade >= 18 && idade < 65) {
+    console.log("Maior de idade");
+} else {
+    console.log("Idoso");
+}                            
+                        </code></pre>
+                    </div>
+                </li>
+                <li>
+                    <h4>Usando <code>switch</code> para Exibir uma Mensagem Baseada em uma Nota</h4>                    
+                    <div class="code-block">
+                        <div class="code-block-title">JavaScript</div>
+                        <pre><code>
+let nota = parseInt(prompt("Digite a nota final (de 0 a 10):"));
+
+switch (nota) {
+    case 10:
+    case 9:
+        console.log("Excelente!");
+        break;
+    case 8:
+    case 7:
+        console.log("Bom");
+        break;
+    case 6:
+    case 5:
+        console.log("Regular");
+        break;
+    default:
+        console.log("Insuficiente");
+}                   
+                        </code></pre>
+                    </div>
+                </li>
+            </ol>
+        </div>
+    </section>
+
+    <section id=atividade>
+        <div class="container">
+            <h3>Exercício Prático</h3>
+            <h4>Criar uma página onde:</h4>
+            <ul>
+                <li>O usuário insere a sua idade.</li>
+                <li>Se a idade for menor que 12, exiba a mensagem “Criança”.</li>
+                <li>Se a idade estiver entre 12 e 17, exiba “Adolescente”.</li>
+                <li>Se a idade estiver entre 18 e 64, exiba “Adulto”.</li>
+                <li>Se a idade for 65 ou mais, exiba “Idoso”.</li>
+            </ul>
+            <p>Use if, else if e else para realizar essas condições e exiba o resultado no console.log.</p>
+            <p>Adicione o link da atividade <a href="atividade/atividade.html">aqui</a></p>
+            <hr>
+        </div>
+    </section>
 </body>
 
 </html>
