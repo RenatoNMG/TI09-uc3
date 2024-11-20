@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadorq</title>
+    <style>
+        .resultado ul{
+            border: 2px;
+            display: grid;
+            grid-template-columns: repeat(4,200px);
+            grid-template-rows: repeat(9,40px);
+            gap: 10px;
+            background-color: aquamarine;
+
+        }
+        .resultado ul li{
+            list-style: none;
+
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Gerador de tabuada</h1>
+    <p>Insira um numero para gerar a tabuada completa: </p>
+    <input type="number" id="numeroInput">
+    <button onclick="gerartabuada()">Gerar Tabuada</button>
+    <div class="resultado" id="resultado"></div>
+    
+
+    <script>
+
+        function gerartabuada(){
+            // Obtem o valor do input
+            
+            let numero = parseInt(document.getElementById("numeroInput").value);
+
+            // Insere o resultado na div
+            let resuldatoDiv = document.getElementById("resultado");
+            resuldatoDiv.innerHTML = "";
+            let list = "<ul>";
+
+                list += "<li><strong>Tabuada de Adição </strong></li>"
+            for(let i = 1; i <=10;i++){
+                list += `<li> ${numero} + ${i} = ${numero + i} </li>`;
+            }
+            list += "<li><strong>Tabuada de Subtração </strong></li>"
+
+            for(let i = 1; i <=10;i++){
+                list += `<li> ${numero} - ${i} = ${numero - i} </li>`;
+            }
+            list += "<li><strong>Tabuada de Multipicação </strong></li>"
+
+            for(let i = 1; i <=10;i++){
+                list += `<li> ${numero} * ${i} = ${numero * i} </li>`;
+            }
+            list += "<li><strong>Tabuada de Divisão </strong></li>"
+            for(let i = 1; i <=10;i++){
+                list += `<li> ${numero} / ${i} = ${numero / i} </li>`;
+            }
+
+            resuldatoDiv.innerHTML += list;
+        }
+    </script>
+</body>
+</html>
