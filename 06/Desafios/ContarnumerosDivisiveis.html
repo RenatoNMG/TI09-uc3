@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <script>
+
+        let limite = parseInt(prompt("digite um numero ?"))
+        let conta = 0;
+        let divisiivel = 0;
+
+
+        if (limite < 0) {
+            console.log("numero negativo");
+        } else {
+            for (let i = 0;i < limite; i++) {
+             
+                conta++
+                console.log(conta)
+                if (conta % 3 == 0 || conta % 5 == 0) {
+                    divisiivel++
+                    console.log(`o numero ${conta} é divisivel`)
+
+                }
+            }
+        }
+
+
+        console.log("total "+ conta)
+        console.log("divisivel "+ divisiivel)
+
+
+
+    </script>
+</body>
+
+</html>
