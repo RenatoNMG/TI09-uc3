@@ -4,6 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        h1{
+            font-size: 3em;
+        }
+        *{
+            background-color: rgb(83, 117, 106);
+            margin: 10px;
+            text-align: center;
+        }
+        input, button{
+            background-color: white;
+            padding: 5px;
+            color: black;
+        }
+    </style>
 </head>
 <body>
     <h1>Calculadora</h1>
@@ -14,7 +29,7 @@
     <label for="numero1">Numero 2</label>
     <input type="number" id="numero2">
     <br>
-    <label for="operacao">Numero 1</label>
+    <label for="operacao">Operação</label>
     <input type="text" id="operacao" placeholder="Digite +, -, *, /">
     <br>
     <button onclick="exibirResultado()">Calcular</button>

@@ -1,18 +1,39 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>minuto em hora</title>
+    <style>
+        * {
+            margin: 10px;
 
-    <script>
-        let minutos = parseInt(prompt("digite os minutos"));
-        let horas = parseInt(minutos/60) 
-        minutos -= horas*60;
-        console.log(`${horas}Horas e ${minutos} minutos`);
-    </script>
+        }
+
+        .resultado {
+            border: 2px solid black;
+            width: 400px;
+            height: 80px;
+            text-align: center;
+        }
+    </style>
 </head>
+<h1>Converter minutos em horas</h1>
+<label for="minutos">Digite os Minutos</label>
+<br>
+<input type="number" id="minutos" placeholder="Digite os Minutos">
+<button onclick="calcular()">Calcular</button>
+
+<fieldset class="resultado">
+    <legend>Valor Calculado</legend>
+    <p id="resultado"></p>
+</fieldset>
+
+
+
 <body>
-    
+    <script src="script.js"></script>
 </body>
+
 </html>
