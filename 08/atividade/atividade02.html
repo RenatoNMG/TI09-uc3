@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input id="anonima" type="text">
+    <p id="teclaPressionada"></p>
+
+    <script>
+        // function mostrarTecla(evento){
+        //     document.getElementById("teclaPressionada").innerText = "tecla: "+ evento.key;
+
+        // }
+
+        document.getElementById("anonima").onkeydown = () => {
+            document.getElementById("teclaPressionada").innerText = "Tecla" + event.key;
+        }
+    </script>
+</body>
+</html>

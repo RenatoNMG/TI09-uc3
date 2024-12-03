@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+<body>
+    <button id="botaocor">Passe  o mouse aqui</button>
+
+    <button id="MudaporNome" onmouseover="colorir()" onmouseout="descolorir()">Passe o moouse aqui</button>
+    
+
+    <button id="naoclick">Não click</button>
+    <script>
+        const botao = document.getElementById("botaocor");
+
+        botao.onmouseover = () => {
+            botao.style.background = "yellow";
+        }
+
+        botao.onmouseout = () => {
+            botao.style.background = "";
+        }
+        
+// ==============================================
+
+function colorir(){
+    const botao = document.getElementById("MudaporNome");
+    botao.style.background = "red";
+}
+
+function descolorir(){
+    const botao2 = document.getElementById("MudaporNome");
+    botao2.style.background = "";
+}
+
+document.getElementById("naoclick").style.onmouseover = () => {
+    
+}
+
+
+
+        
+
+    </script>
+</body>
+</html> 
