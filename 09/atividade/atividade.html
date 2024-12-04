@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="titulo">Ola mundo</h1>
+    <p class="texto">Primeiro paragrafo</p>
+    <p class="texto">Segundo paragrafo</p>
+
+    <ul id="lista">
+        <li>intem 1</li>
+        <li>intem 2</li>
+
+    </ul>
+
+    <script>
+        let list = document.getElementById("lista");
+        //criando um novo elemento
+        let newintem = document.createElement("li");
+        newintem.innerText = "intem 3";
+        list.appendChild(newintem);
+
+
+        //removendo um elemento
+        let primeirointem = list.firstElementChild;
+        list.removeChild(primeirointem);
+    </script>
+</body>
+</html>
