@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        button{
+            padding: 5px;
+            margin: 4px;
+        }
+        
+        
+    </style>
+</head>
+<body>
+    <input id="entrada" type="text">
+    <button id="adicionar">Adicionar a Lista</button>
+    <h1>Tarefas</h1>
+    <hr>
+    <ul id="lista">
+        
+    </ul>
+    
+
+    <script>
+    const botao = document.getElementById("adicionar");
+
+        
+
+    var feito = document.createElement("button");
+    var naofeito = document.createElement("button");
+    
+
+    botao.onclick = ()=>{
+
+        
+        feito.innerText = "feito";
+        naofeito.innerText = "Não feito";
+
+        let lista = document.getElementById("lista")
+        let adicionar = document.getElementById("entrada").value;
+        const novoelemento = document.createElement("p");
+        novoelemento.innerText = adicionar + lista.appendChild(feito) + lista.appendChild(naofeito);
+        lista.append(novoelemento)
+        
+        
+    }
+
+    feito.onclick = () =>{
+        feito.style.backgroundColor = "green";
+        naofeito.style.backgroundColor = "white";
+    }
+    naofeito.onclick = () =>{
+        feito.style.backgroundColor = "white";
+        naofeito.style.backgroundColor = "red";
+    }
+
+
+
+   
+
+    </script>
+</body>
+</html>

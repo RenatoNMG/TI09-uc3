@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="titulo1">Atividade2</title>
+    <style>
+        *{
+            margin: 20px;
+            padding: 5px;
+            font-family: Arial, Helvetica, sans-serif;
+            
+        }
+    </style>
+</head>
+<body>
+    <h1 id="titulo">Titulo</h1>
+    <div id="paragrafo">
+
+        <p>Paragrafo</p>
+
+    </div>
+    
+    <button id="botao">click aqui</button>
+    
+    <script>
+        let paragrafo = document.getElementById("paragrafo");
+        let botao = document.getElementById("botao");
+
+        botao.onclick = ()=>{
+            paragrafo.innerText = "Ola Mundo!"
+
+            let filho = document.createElement("p")
+            filho.innerText = "novo elemento";
+            document.body.append(filho);
+            
+
+            let titulo = document.getElementById("titulo");
+            titulo.innerText = "";
+
+            document.querySelector("title").remove();
+            
+
+        }
+    </script>
+</body>
+</html>
