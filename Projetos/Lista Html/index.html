@@ -5,56 +5,137 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
+        *{
+            text-align: left;
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-color: beige;
+        }
         button{
             padding: 5px;
-            margin: 4px;
+            margin: 10px;
+            background-color: rgb(188, 245, 104);
+            border-radius: 10PX;
         }
-        
+        ul p{
+            display: block;
+            margin: 40PX;
+            padding: 30px;
+            border: 3PX solid black;
+            background-color: rgb(233, 232, 231);
+            border-radius: 10px;
+            
+            
+        }
+        input{
+            padding: 10px;
+            margin: 10px;
+            background-color: white;
+        }
+     
+
+        hr{
+            margin: 20px;
+        }
+        body{
+            border-left: 2px solid ;
+            border-right: 2px solid ;
+            border-top: 2px solid ;
+        }
+        h1{
+            background-color: rgb(114, 114, 158);
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+        ul button{
+            background-color: rgb(231, 118, 118);
+            border-radius: 0px;
+            padding: 5px;
+            position: sticky;
+            left: 1000px;
+            
+
+            
+            
+            
+        }
+   
         
     </style>
 </head>
 <body>
+    <h1>Tarefas</h1>
     <input id="entrada" type="text">
     <button id="adicionar">Adicionar a Lista</button>
-    <h1>Tarefas</h1>
     <hr>
+    
     <ul id="lista">
+
         
     </ul>
     
 
     <script>
+
     const botao = document.getElementById("adicionar");
 
         
 
-    var feito = document.createElement("button");
-    var naofeito = document.createElement("button");
-    
-
     botao.onclick = ()=>{
 
+
         
-        feito.innerText = "feito";
-        naofeito.innerText = "Não feito";
+        let adicionar = document.getElementById("entrada").value;
+
+        if(adicionar === ""){
+            console.log("input vazio:")
+
+        }else{
+            
+        let checar = document.createElement("input");
+        checar.type = "checkbox"
+
+        let apagar = document.createElement("button");
+        apagar.innerText = "Apagar";
+
+        let hr = document.createElement("hr");
+        
+
 
         let lista = document.getElementById("lista")
-        let adicionar = document.getElementById("entrada").value;
+        
+
         const novoelemento = document.createElement("p");
-        novoelemento.innerText = adicionar + lista.appendChild(feito) + lista.appendChild(naofeito);
-        lista.append(novoelemento)
+
         
+        novoelemento.innerText = adicionar;
+
+
+
+        novoelemento.append(checar)
+        lista.append(novoelemento);
         
+        lista.append(hr);
+        novoelemento.append(apagar);
+        
+
+        apagar.onclick =  () =>{
+            lista.removeChild(novoelemento);
+            lista.removeChild(hr);
+            
+
+        }
+
+        }
+
+    
     }
 
-    feito.onclick = () =>{
-        feito.style.backgroundColor = "green";
-        naofeito.style.backgroundColor = "white";
-    }
-    naofeito.onclick = () =>{
-        feito.style.backgroundColor = "white";
-        naofeito.style.backgroundColor = "red";
-    }
+
+
+    
 
 
 
