@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Playground3</title>
+    <style>
+        body.dark-mode{
+            background-color: black;
+            color: white;
+        }
+    </style>
+
+</head>
+<body>
+
+    <button id="togglethemeBtn"> alterar tema</button>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima ut cumque reiciendis eveniet praesentium iusto unde, eligendi nihil aperiam dignissimos! Officiis quos, magnam autem commodi in laborum possimus fugit dolorum!
+    Similique modi impedit provident vitae, quia et nostrum sint officia amet expedita reprehenderit harum at, ad itaque aperiam praesentium. Commodi veniam sint laboriosam hic voluptas soluta nulla voluptatum tempora architecto!
+    Asperiores aliquam obcaecati iure mollitia, id inventore ullam tempora, repellat odit aut error quae, earum ad minima hic. Dignissimos officia consequuntur doloremque aperiam harum accusamus quod accusantium omnis excepturi cum?
+    Alias dolores temporibus, nam repudiandae quas vel voluptatibus ab omnis, nihil, vitae eius accusantium placeat molestiae architecto ullam sapiente magnam reiciendis! Aspernatur, est quasi? Ipsa, officia atque. Delectus, voluptatum! Aperiam?
+    Perspiciatis earum corrupti repellat nostrum sequi fuga ea, repellendus sint. Corporis repellat esse exercitationem possimus, illo molestiae, eaque ratione iusto praesentium tempore ipsam dolorum qui. Quidem minus consectetur impedit odit?
+    </p>
+
+    <script>
+        const toggleBtn = document.getElementById("togglethemeBtn");
+
+
+        toggleBtn.addEventListener("click", ()=>{
+            document.body.classList.toggle("dark-mode")
+        })
+    </script>
+    
+</body>
+</html>
