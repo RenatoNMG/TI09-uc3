@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="banner" style="width: 200px; height: 100px; background-color: red;"></div>
+
+    <button id="botao">Click aqui e ganhe 100000</button>
+    <script>
+        // executa uma função uma unica vez após um tempo definido.
+        // setTimeout (Ccallback, tempo);
+        console.log("ola, na hora");
+        setTimeout(() =>{
+            console.log("ola, atrasado!");
+        }, 5000);
+
+        // execua uma função repitidamente em intervalos de tempo
+        // set Interval(callback, Intervalo);
+
+        setTimeout(() => {
+            document.getElementById("banner").style.display = "none";
+            
+        }, 5000);
+
+        setInterval(()=>{
+            let btn = document.getElementById("botao");
+            btn.style.opacity = btn.style.opacity === "0" ? "1" : "0";
+
+        }, 1000);
+
+
+    </script>
+</body>
+</html>
